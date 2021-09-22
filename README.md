@@ -12,6 +12,7 @@
 
 ## Link of Deployed Application
 
+https://faizila.github.io/Password-Generator/
 
 ## Screenshots of Deployed Application
 
