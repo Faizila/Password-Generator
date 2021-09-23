@@ -8,32 +8,33 @@ var numbers = "0123456789";
 var special = "!@#$%^&*,.+=(){}[]/";
 var Characters = "";
 
-
-
 // Event Listener added to generate button
 generateBtn.addEventListener("click", writePassword);
 
-//generate password function gets called in and it would return the final password.
+//function would return the final password.
 function generatePassword(){
-  var result = "";
+  var finalResult = "";
 
-  //User answers a question that how many characters they want in their password between 8-128 characters.
+  //Question for user
   var length = prompt("How many characters do you want in your password? Please choose numbers between 8 and 128!");
+  // function determines whether a value is an illegal number or not.
   if(isNaN(length)){
     alert("You must enter a number!");
     return generatePassword()
   }
+  // user will get an alert if they pick a number outside the mentioned range.
   if(length<8 || length> 128){
     alert("Please choose numbers between 8 - 128!");
     return generatePassword()
   }
-//User answers few questions like if they want to include or not want to include upper case, lower case, number or special characters?
+
+//Questions for user to answer
   var incUpper = confirm("Do you want to include upper case letters?");
   var incLower = confirm("Do you want to include lower case letters?");
   var incNumbers = confirm("Do you want to include numbers?");
   var incSpecial = confirm("Do you want to include special characters?");
 
-//User will get an alert to choose at least one character type.
+//User will get an alert to choose at least one character type
   if(!incUpper&&!incLower&&!incNumbers&&!incSpecial){
     alert("You must choose at least one character type!");
     return generatePassword()
@@ -56,9 +57,9 @@ function generatePassword(){
   
 // Result
 for (var i = 0; i < length; i++) {
-  result += Characters.charAt(Math.floor(Math.random() * Characters.length));
+  finalResult += Characters.charAt(Math.floor(Math.random() * Characters.length));
 }
-return result;
+return finalResult;
 
 }
 
