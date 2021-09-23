@@ -4,7 +4,7 @@
 
 # Description
 
-* On Password Generator webpage, when user clicks "generate password" button, then the user is prompted to enter numbers between 8 and 128 characters in length. It then prompts the user to enter their preferences. For instance, whether a user want to include or don't want to include upper and lower case letters, numbers and special characters to generate their random password. When the questionaire is complete, the application generates a random password for the user.
+* On Password Generator webpage, when user clicks "generate password" button, then the user is prompted to enter numbers between 8 and 128 characters in length. If the user enters a number outside the specified range, then user gets an alert window to enter a number between 8-128. Once user enters a number within the range, then the user gets prompted to answer few preference questions regarding random password selection. For instance, whether a user want to include or don't want to include upper and lower case letters, numbers and special characters in their random password. When the questionaire is completed, the application will generate a random password for the user.
 
 ## Technologies Used
 
